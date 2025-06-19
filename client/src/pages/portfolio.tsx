@@ -25,7 +25,7 @@ export default function Portfolio() {
             <div>
               <h3 className="text-xl font-bold mb-4">Cristian Cedacero</h3>
               <p className="text-slate-300 mb-4">
-                Senior Backend Engineer specializing in secure authentication systems and AI-powered automation solutions.
+                Backend Engineer specializing in secure authentication systems and AI-powered automation solutions.
               </p>
               <div className="flex space-x-4">
                 <a 

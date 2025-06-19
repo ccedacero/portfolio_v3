@@ -6,55 +6,39 @@ export function ExperienceSection() {
   const experiences = [
     {
       title: "Software Engineer",
-      company: "New Relic - Authentication Platform",
+      company: "New Relic",
       period: "2022 - Present",
       color: "bg-blue-600",
       achievements: [
-        "Lead implementation of PKCE for OAuth 2.0 security enhancement",
-        "Built unified authentication system with social sign-in integration",
-        "Achieved 99.99% uptime through advanced monitoring and alerting",
-        "Provide Tier-2 technical support and crisis management"
+        "Lead PKCE implementation for OAuth 2.0 security enhancement",
+        "Built unified authentication with social sign-in integration",
+        "Achieved 99.99% uptime through monitoring and alerting systems"
       ],
-      technologies: ["Ruby on Rails", "OAuth 2.0", "Azure B2C", "Monitoring"]
+      technologies: ["Ruby on Rails", "OAuth 2.0", "Azure B2C"]
     },
     {
       title: "Associate Software Engineer",
-      company: "New Relic - Authentication Platform",
+      company: "New Relic",
       period: "2021 - 2022",
       color: "bg-green-600",
       achievements: [
-        "Collaborated with product management on user behavior analysis",
         "Developed audit event systems for critical user actions",
-        "Contributed to high-availability system design",
-        "Enhanced platform security with modern auth flows"
+        "Enhanced platform security with modern authentication flows",
+        "Collaborated on high-availability system design"
       ],
-      technologies: ["Ruby on Rails", "Audit Systems", "High Availability", "Security"]
+      technologies: ["Ruby on Rails", "Security", "High Availability"]
     },
     {
       title: "Associate Software Engineer",
-      company: "Abound - Internal Tools",
+      company: "Abound",
       period: "2021 - 2022",
       color: "bg-purple-600",
       achievements: [
-        "Built and maintained REST APIs for e-commerce platform",
-        "Developed UI interfaces for enhanced user experience",
-        "Implemented data parsing and ingest processes",
-        "Documented and supported data processing workflows"
+        "Built REST APIs for e-commerce platform",
+        "Implemented data parsing and processing workflows",
+        "Developed user interfaces for internal tools"
       ],
-      technologies: ["REST APIs", "E-commerce", "Data Processing", "UI Development"]
-    },
-    {
-      title: "Early Career & Education",
-      company: "Various Roles & Flatiron School",
-      period: "2019 - 2021",
-      color: "bg-orange-600",
-      achievements: [
-        "Comprehensive Software Engineering Bootcamp completion",
-        "IT support and troubleshooting expertise at U.S. Census Bureau",
-        "Web design and SEO optimization for small businesses",
-        "Google IT Support Professional Certificate"
-      ],
-      technologies: ["Full-Stack Development", "IT Support", "SEO", "Web Design"]
+      technologies: ["REST APIs", "Data Processing", "E-commerce"]
     }
   ];
 

@@ -9,42 +9,28 @@ export function SkillsSection() {
       title: "Backend Engineering",
       color: "text-blue-600 dark:text-blue-400",
       bgColor: "bg-blue-100 dark:bg-blue-900",
-      skills: ["Ruby on Rails", "Java & Python", "RESTful APIs", "GraphQL"]
+      skills: ["Ruby on Rails", "Java & Python", "RESTful APIs"]
     },
     {
       icon: Lock,
-      title: "Security & Auth",
+      title: "Authentication & Security",
       color: "text-green-600 dark:text-green-400",
       bgColor: "bg-green-100 dark:bg-green-900",
-      skills: ["OAuth 2.0 / PKCE", "SAML & OpenID Connect", "JWT & BCrypt", "HashiCorp Vault"]
-    },
-    {
-      icon: Palette,
-      title: "Frontend Development",
-      color: "text-purple-600 dark:text-purple-400",
-      bgColor: "bg-purple-100 dark:bg-purple-900",
-      skills: ["React & TypeScript", "JavaScript & Node.js", "Material-UI & CSS3", "Responsive Design"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud & DevOps",
-      color: "text-cyan-600 dark:text-cyan-400",
-      bgColor: "bg-cyan-100 dark:bg-cyan-900",
-      skills: ["AWS (S3, EC2, CloudWatch)", "Docker & Terraform", "CI/CD Pipelines", "Monitoring & Logging"]
-    },
-    {
-      icon: Database,
-      title: "Database & Data",
-      color: "text-orange-600 dark:text-orange-400",
-      bgColor: "bg-orange-100 dark:bg-orange-900",
-      skills: ["PostgreSQL & SQL", "ActiveRecord ORM", "Data Parsing & Ingest", "Performance Optimization"]
+      skills: ["OAuth 2.0 / PKCE", "SAML", "JWT & BCrypt"]
     },
     {
       icon: Brain,
       title: "AI & Automation",
       color: "text-indigo-600 dark:text-indigo-400",
       bgColor: "bg-indigo-100 dark:bg-indigo-900",
-      skills: ["AI Agent Development", "Process Automation", "Workflow Optimization", "Machine Learning Integration"]
+      skills: ["AI Agents", "Workflow Automation", "Process Optimization"]
+    },
+    {
+      icon: Cloud,
+      title: "Cloud & Infrastructure",
+      color: "text-cyan-600 dark:text-cyan-400",
+      bgColor: "bg-cyan-100 dark:bg-cyan-900",
+      skills: ["AWS", "Docker", "High Availability"]
     }
   ];
 
@@ -58,7 +44,7 @@ export function SkillsSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}

@@ -7,35 +7,27 @@ import { motion } from "framer-motion";
 export function ProjectsSection() {
   const projects = [
     {
-      title: "Enterprise Authentication Platform",
-      description: "Led the implementation of PKCE-enhanced OAuth 2.0 flows and unified social sign-in integration, serving millions of users with 99.99% uptime guarantee.",
+      title: "Authentication Platform",
+      description: "Led PKCE-enhanced OAuth 2.0 implementation and social sign-in integration, serving millions of users with 99.99% uptime.",
       icon: Shield,
       gradient: "from-blue-500 to-cyan-600",
-      technologies: ["OAuth 2.0", "PKCE", "Ruby on Rails", "Azure B2C"],
-      features: ["Security Focus", "High Availability"]
+      technologies: ["OAuth 2.0", "PKCE", "Ruby on Rails"],
+      features: ["Security", "High Availability"]
     },
     {
-      title: "AI-Powered Automation Suite",
-      description: "Developed intelligent agents for workflow automation, reducing manual processes by 80% and enabling seamless integration with existing development workflows.",
+      title: "AI Automation Suite",
+      description: "Built intelligent agents that automate complex workflows, reducing manual processes and integrating seamlessly with development tools.",
       icon: Bot,
       gradient: "from-purple-500 to-pink-600",
-      technologies: ["AI Agents", "Python", "Automation", "ML Integration"],
-      features: ["AI-Powered", "Workflow"]
+      technologies: ["AI Agents", "Process Automation", "Python"],
+      features: ["AI-Powered", "Efficient"]
     },
     {
-      title: "Distributed Monitoring System",
-      description: "Built comprehensive alerting and service-level monitoring infrastructure, enabling proactive issue detection and maintaining 99.99% system availability.",
-      icon: TrendingUp,
-      gradient: "from-green-500 to-emerald-600",
-      technologies: ["Monitoring", "Alerting", "New Relic", "DataDog"],
-      features: ["Real-time", "Reliable"]
-    },
-    {
-      title: "E-commerce API Platform",
-      description: "Architected and maintained scalable REST APIs supporting e-commerce operations, with advanced data processing pipelines and optimized performance.",
+      title: "E-commerce APIs",
+      description: "Developed scalable REST APIs for e-commerce platform with data processing pipelines and performance optimization.",
       icon: ShoppingCart,
-      gradient: "from-orange-500 to-red-600",
-      technologies: ["REST APIs", "E-commerce", "Data Processing", "Performance"],
+      gradient: "from-green-500 to-emerald-600",
+      technologies: ["REST APIs", "Data Processing", "Ruby"],
       features: ["Scalable", "Optimized"]
     }
   ];
@@ -57,7 +49,7 @@ export function ProjectsSection() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

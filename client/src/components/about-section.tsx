@@ -23,10 +23,10 @@ export function AboutSection() {
           >
             <h3 className="text-2xl font-semibold text-foreground">My Journey</h3>
             <p className="text-muted-foreground leading-relaxed">
-              With over 4 years of experience as a backend engineer, I specialize in secure authentication systems and unified identity solutions. Currently at New Relic, I focus on building high-availability platforms that serve millions of users while maintaining 99.99% uptime.
+              Backend engineer with 4+ years of experience building secure authentication systems at New Relic. I focus on high-availability platforms serving millions of users with 99.99% uptime.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My expertise spans distributed systems, OAuth 2.0 implementations, and modern AI agent development. I'm passionate about leveraging artificial intelligence to automate complex workflows and enhance system reliability.
+              I specialize in OAuth 2.0 implementations and building AI agents that automate complex workflows, making systems more reliable and efficient.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mt-8">

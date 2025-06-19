@@ -28,7 +28,7 @@ export function HeroSection() {
             <span className="text-primary">Cristian Cedacero</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Senior Backend Engineer specializing in secure authentication systems, distributed architecture, and AI-powered automation solutions
+            Backend Engineer specializing in secure authentication systems and AI-powered automation solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button

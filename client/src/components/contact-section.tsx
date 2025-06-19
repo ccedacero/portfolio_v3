@@ -85,7 +85,7 @@ export function ContactSection() {
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-6">Get In Touch</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you're looking for a senior backend engineer, need consultation on authentication systems, or want to explore AI automation solutions, I'm always interested in meaningful conversations and challenging projects.
+                Whether you need consultation on authentication systems, want to explore AI automation solutions, or have an interesting project opportunity, I'm always open to meaningful conversations.
               </p>
             </div>
             
@@ -135,7 +135,7 @@ export function ContactSection() {
                 <h4 className="font-semibold text-green-800 dark:text-green-200">Available for Opportunities</h4>
               </div>
               <p className="text-green-700 dark:text-green-300 text-sm">
-                Currently open to new challenges in backend engineering, authentication systems, and AI automation projects.
+                Open to new opportunities in backend engineering, authentication systems, and AI automation.
               </p>
             </Card>
           </motion.div>
