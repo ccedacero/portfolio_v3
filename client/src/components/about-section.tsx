@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Shield, Bot } from "lucide-react";
 import { motion } from "framer-motion";
+import profileImage from "@assets/me_1750375113073.jpeg";
 
 export function AboutSection() {
   return (
@@ -51,8 +52,8 @@ export function AboutSection() {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=800"
-              alt="Professional headshot"
+              src={profileImage}
+              alt="Cristian Cedacero - Professional headshot"
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
             />
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full flex items-center justify-center shadow-lg">
