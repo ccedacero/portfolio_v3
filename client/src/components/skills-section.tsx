@@ -16,7 +16,7 @@ export function SkillsSection() {
       title: "Authentication & Security",
       color: "text-green-600 dark:text-green-400",
       bgColor: "bg-green-100 dark:bg-green-900",
-      skills: ["OAuth 2.0 / PKCE", "SAML", "JWT & BCrypt"]
+      skills: ["OAuth 2.0 / PKCE", "SAML & SCIM", "Azure B2C"]
     },
     {
       icon: Brain,
@@ -30,7 +30,7 @@ export function SkillsSection() {
       title: "Cloud & Infrastructure",
       color: "text-cyan-600 dark:text-cyan-400",
       bgColor: "bg-cyan-100 dark:bg-cyan-900",
-      skills: ["AWS", "Docker", "High Availability"]
+      skills: ["AWS", "Google Cloud", "Docker"]
     }
   ];
 
