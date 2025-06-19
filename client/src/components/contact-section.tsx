@@ -35,7 +35,7 @@ export function ContactSection() {
             
             <div className="space-y-6">
               <a 
-                href="mailto:cristian.cedacero@gmail.com"
+                href="mailto:ccedacero@gmail.com"
                 className="flex items-center p-4 bg-card rounded-lg hover:bg-accent transition-colors group"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
@@ -43,7 +43,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <p className="text-muted-foreground">cristian.cedacero@gmail.com</p>
+                  <p className="text-muted-foreground">ccedacero@gmail.com</p>
                 </div>
               </a>
               
