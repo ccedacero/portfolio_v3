@@ -1,68 +1,12 @@
-import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import { Mail, MapPin, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-
-interface ContactForm {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 export function ContactSection() {
-  const [formData, setFormData] = useState<ContactForm>({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const { toast } = useToast();
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you within 24-48 hours.",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    },
-    onError: (error) => {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again or contact me directly via email.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
-    }
-    contactMutation.mutate(formData);
-  };
-
-  const handleInputChange = (field: keyof ContactForm, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
 
   return (
     <section id="contact" className="py-20 bg-muted/30">
@@ -148,16 +92,28 @@ export function ContactSection() {
           >
             <Card className="p-8">
               <h3 className="text-2xl font-semibold text-foreground mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </div>
+                
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Name *
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your name"
                     required
                   />
@@ -168,9 +124,8 @@ export function ContactSection() {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@example.com"
                     required
                   />
@@ -179,17 +134,16 @@ export function ContactSection() {
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
-                  <Select value={formData.subject} onValueChange={(value) => handleInputChange("subject", value)}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a subject" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="project">Project Consultation</SelectItem>
-                      <SelectItem value="job">Job Opportunity</SelectItem>
-                      <SelectItem value="technical">Technical Discussion</SelectItem>
-                      <SelectItem value="general">General Inquiry</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <select 
+                    name="subject" 
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="project">Project Consultation</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="technical">Technical Discussion</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
@@ -197,19 +151,14 @@ export function ContactSection() {
                   </label>
                   <Textarea
                     id="message"
-                    value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
+                    name="message"
                     placeholder="Tell me about your project or opportunity..."
                     rows={4}
                     required
                   />
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full" 
-                  disabled={contactMutation.isPending}
-                >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                <Button type="submit" className="w-full">
+                  Send Message
                 </Button>
               </form>
               
