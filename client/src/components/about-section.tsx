@@ -8,12 +8,15 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            About Me
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Independent and pragmatic software engineer with a passion for building secure, scalable systems
+            Independent and pragmatic software engineer with a passion for
+            building secure, scalable systems
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             className="space-y-6"
@@ -22,28 +25,43 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-foreground">My Journey</h3>
+            <h3 className="text-2xl font-semibold text-foreground">
+              My Journey
+            </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Backend engineer with 4+ years of experience building secure authentication systems at New Relic. I focus on high-availability platforms serving millions of users with 99.99% uptime.
+              Backend engineer with 4+ years of total experience, including 3
+              years at New Relic building secure authentication systems. My
+              expertise lies in high-availability platforms serving a large user
+              base with 99.99% uptime.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I specialize in OAuth 2.0 implementations and building AI agents that automate complex workflows, making systems more reliable and efficient.
+              I specialize in OAuth 2.0 implementations and building AI agents
+              that automate complex workflows, making systems more reliable and
+              efficient.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-6 mt-8">
               <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                 <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-semibold text-foreground mb-1">Security Focus</h4>
-                <p className="text-sm text-muted-foreground">Authentication & Authorization</p>
+                <h4 className="font-semibold text-foreground mb-1">
+                  Security Focus
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Authentication & Authorization
+                </p>
               </Card>
               <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                 <Bot className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-semibold text-foreground mb-1">AI Integration</h4>
-                <p className="text-sm text-muted-foreground">Automation & Efficiency</p>
+                <h4 className="font-semibold text-foreground mb-1">
+                  AI Integration
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Automation & Efficiency
+                </p>
               </Card>
             </div>
           </motion.div>
-          
+
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: 20 }}

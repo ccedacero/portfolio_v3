@@ -8,28 +8,31 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "Authentication Platform",
-      description: "Led PKCE-enhanced OAuth 2.0 implementation and social sign-in integration, serving millions of users with 99.99% uptime.",
+      description:
+        "Led PKCE-enhanced OAuth 2.0 implementation and social sign-in integration, supporting platforms handling millions of requests with 99.99% uptime.",
       icon: Shield,
       gradient: "from-blue-500 to-cyan-600",
       technologies: ["OAuth 2.0", "PKCE", "Ruby on Rails"],
-      features: ["Security", "High Availability"]
+      features: ["Security", "High Availability"],
     },
     {
       title: "AI Automation Suite",
-      description: "Built intelligent agents that automate complex workflows, reducing manual processes and integrating seamlessly with development tools.",
+      description:
+        "Built intelligent agents that automate complex workflows, reducing manual processes and integrating seamlessly with development tools.",
       icon: Bot,
       gradient: "from-purple-500 to-pink-600",
       technologies: ["AI Agents", "Process Automation", "Python"],
-      features: ["AI-Powered", "Efficient"]
+      features: ["AI-Powered", "Efficient"],
     },
     {
       title: "E-commerce APIs",
-      description: "Developed scalable REST APIs for e-commerce platform with data processing pipelines and performance optimization.",
+      description:
+        "Developed scalable REST APIs for e-commerce platform with data processing pipelines and performance optimization.",
       icon: ShoppingCart,
       gradient: "from-green-500 to-emerald-600",
       technologies: ["REST APIs", "Data Processing", "Ruby"],
-      features: ["Scalable", "Optimized"]
-    }
+      features: ["Scalable", "Optimized"],
+    },
   ];
 
   const scrollToSection = (sectionId: string) => {
